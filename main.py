@@ -22,13 +22,13 @@ def contato():
 def login():
     if request.method == "get":
         return render_template("login.html")
-        elif request.method == "post":
-            usuario = request.form.get("username")
-            senha= request.form.get("password")
+    elif request.method == "post":
+        usuario = request.form.get("username")
+        senha= request.form.get("password")
 
-            if username == "usuario1":
-                if password == "senhaUsuario":
-                    return redirect(url_for('upload'))
+        if usuario == "usuario1":
+            if senha == "senhaUsuario":
+                return redirect(url_for('upload'))
 
 @app.route("/upload")
 def upload ():
