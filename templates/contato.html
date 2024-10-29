@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contato | Confeitaria Sempre Doce</title>
+    <link rel="icon" type="D.png" href="img/D.png">
+    <!-- Exemplo para favicon no formato .ico -->
+    <link rel="icon" type="image/x-icon" href="img/D.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f5fa;
+            color: #4b004b;
+        }
+
+        header {
+            background-color: #d9b3ff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo h1 {
+            color: #fff;
+            font-size: 36px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffe6ff;
+        }
+
+        .hero {
+            background-color: #b380ff;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #d9b3ff;
+            color: #4b004b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b380ff;
+            color: #fff;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .product-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #f9f0ff;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin-top: 15px;
+            color: #800080;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 2px solid #d9b3ff;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #d9b3ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #b380ff;
+        }
+
+        footer {
+            background-color: #d9b3ff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Confeitaria Sempre Doce</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="menu.html">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contato</h2>
+        <p>Entre em contato para pedidos e informações!</p>
+        <form action="enviar.php" method="post">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

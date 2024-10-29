@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login | Confeitaria Sempre Doce</title>
+    <link rel="icon" type="D.png" href="img/D.png">
+    <!-- Exemplo para favicon no formato .ico -->
+    <link rel="icon" type="image/x-icon" href="img/D.png">
+    <style>
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f5fa;
+            color: #4b004b;
+        }
+
+        header {
+            background-color: #d9b3ff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo h1 {
+            color: #fff;
+            font-size: 36px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffe6ff;
+        }
+
+        .hero {
+            background-color: #b380ff;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #d9b3ff;
+            color: #4b004b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b380ff;
+            color: #fff;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .product-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #f9f0ff;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin-top: 15px;
+            color: #800080;
+        }
+
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 2px solid #d9b3ff;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #d9b3ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #b380ff;
+        }
+
+        footer {
+            background-color: #d9b3ff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7d609b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #800080;
+            margin-bottom: 30px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d9b3ff;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            background-color: #d9b3ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #b380ff;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Confeitaria Sempre Doce</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="menu.html">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="" method="post"></form>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p class="error-message" id="errorMessage">Usuário ou senha incorretos!</p>
+        </form>
+    </div>
+
+    <script>
+        // Simulando usuário e senha corretos
+        const correctUsername = "usuario";
+        const correctPassword = "senha123";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === correctUsername && password === correctPassword) {
+                // Redireciona para a página inicial
+                window.location.href = "upload.html";
+            } else {
+                // Mostra mensagem de erro
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

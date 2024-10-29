@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upload de Arquivos - Confeitaria Sempre Doce</title>
+    <link rel="icon" type="D.png" href="img/D.png">
+    <!-- Exemplo para favicon no formato .ico -->
+    <link rel="icon" type="image/x-icon" href="img/D.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f5fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upload-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .upload-container h2 {
+            text-align: center;
+            color: #800080;
+            margin-bottom: 30px;
+        }
+
+        .upload-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d9b3ff;
+            border-radius: 5px;
+        }
+
+        .upload-container button {
+            width: 100%;
+            background-color: #d9b3ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .upload-container button:hover {
+            background-color: #b380ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="upload-container">
+        <h2>Upload de Arquivos</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Selecione um Arquivo .txt:</label>
+            <input type="file" name="file" accept=".txt" required>
+            <button type="submit">Enviar Arquivo</button>
+        </form>
+    </div>
+
+</body>
+</html>
